@@ -4,7 +4,7 @@
     --color-text: #1A1A1A;        /* 深炭灰 */
     --color-text-light: #555555;
     --color-border: #E5E5E5;      /* 浅灰 */
-    --color-accent: #991B1B;      /* 复古朱红 */
+    --color-accent: #1b2399;      /* 复古朱红 */
 
     /* 字体规范 */
     --font-serif: 'Cormorant Garamond', 'Playfair Display', serif;
@@ -248,11 +248,13 @@ h1, h2, h3, .nav-brand {
 
 .slider-container {
     display: flex;
-    gap: var(--spacing-md);
+    gap: 1.25rem;
     padding-bottom: var(--spacing-md);
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
     overflow-x: auto;
     overflow-y: visible;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x proximity;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none; 
@@ -267,13 +269,15 @@ h1, h2, h3, .nav-brand {
 }
 
 .slider-container img {
-    height: 70vh;
+    height: 58vh;
     width: auto;
-    max-width: none;
+    max-width: 75%;
     object-fit: contain;
-    scroll-snap-align: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+    flex-shrink: 0;
     cursor: zoom-in;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
     transition: transform 0.3s ease;
 }
 
